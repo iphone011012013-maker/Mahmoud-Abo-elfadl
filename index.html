@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="no-js">
+<!-- 
+    ===============================================================================================
+    PROJECT: MAHMOUD ABOLFADL OFFICIAL PORTFOLIO & SECURITY HUB
+    VERSION: 3.0 (Enterprise Edition)
+    DEVELOPER: MAHMOUD IBRAHIM (Leader & Full Stack Developer)
+    DESCRIPTION: 
+        هذا هو الملف الهيكلي الرئيسي للمشروع. تم تصميمه بمعايير W3C القياسية.
+        يحتوي على أقسام: الرئيسية، من أنا (دمج التاريخ والتقنية)، التوعية الأمنية (محتوى ضخم)،
+        الخدمات، المعرض، المقالات، ونموذج التواصل.
+    ===============================================================================================
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- SEO & META DATA: تحسين محركات البحث والهوية الرقمية -->
+    <title>محمود إبراهيم أبو الفضل | المطور، المؤرخ، وخبير الوعي الأمني</title>
+    <meta name="description" content="الموقع الرسمي لمحمود إبراهيم أبو الفضل. طالب تاريخ بجامعة حلوان، مطور واجهات محترف، وناشط في مجال التوعية ضد الاختراقات والأمن السيبراني. دمج بين عبق التاريخ ومستقبل التقنية.">
+    <meta name="keywords" content="محمود إبراهيم, أبو الفضل ميديا, أمن سيبراني, تطوير ويب, HTML, CSS, JavaScript, تاريخ, جامعة حلوان, تسويق إلكتروني, حماية الاختراق, AboElfadl Media">
+    <meta name="author" content="Mahmoud Ibrahim AboElfadl">
+    <meta name="robots" content="index, follow">
+    
+    <!-- OPEN GRAPH (SOCIAL MEDIA): للظهور بشكل احترافي عند المشاركة على فيسبوك ولينكد إن -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="محمود إبراهيم | القيادة والابتكار التقني">
+    <meta property="og:description" content="اكتشف عالم محمود أبو الفضل: حيث يلتقي تحليل التاريخ بدقة البرمجة وحماية المعلومات.">
+    <meta property="og:url" content="https://mahmoud-abolfadl.com">
+    <meta property="og:site_name" content="AboElfadl Portfolio">
+    <meta property="og:image" content="assets/images/og-cover-gold.jpg">
+    
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="محمود إبراهيم | مطور ومؤرخ">
+    <meta name="twitter:description" content="موقع محمود إبراهيم الشخصي. خدمات برمجية وتوعية أمنية.">
+
+    <!-- PRECONNECT: تسريع الاتصال بالسيرفرات الخارجية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- FAVICON: أيقونة الموقع -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    
+    <!-- STYLESHEET LINKING: ربط ملف التنسيق (سيتم طلبه لاحقاً) -->
+    <!-- ملاحظة: النمط الأساسي موجود هنا لضمان عدم انهيار الصفحة تماماً قبل تحميل الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css"> 
+    
+    <!-- INLINE CRITICAL CSS (لتحسين سرعة التحميل الأولية - LCP) -->
+    <style>
+        /* سيتم نقل التنسيقات الكاملة لملف style.css لاحقاً بناءً على طلبك */
+        body { font-family: sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #050505; color: #ffffff; }
+        .hidden-accessible { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+    </style>
+</head>
+
+<body id="top" data-theme="dark-luxury">
+
+    <!-- ==========================================================================================
+         A11Y SKIP LINK: لتحسين الوصول لذوي الاحتياجات الخاصة (Screen Readers)
+    ========================================================================================== -->
+    <a href="#main-content" class="skip-to-content">انتقل مباشرة إلى المحتوى الرئيسي</a>
+
+    <!-- ==========================================================================================
+         PRELOADER: شاشة التحميل (تجهيز للكود المستقبلي في JS)
+    ========================================================================================== -->
+    <div id="preloader" role="progressbar" aria-label="جاري تحميل الموقع">
+        <div class="loader-content">
+            <img src="icon/ma.png" alt="MA Logo" class="loader-logo-img">
+            <p class="loading-text">جاري تهيئة النظام الآمن...</p>
+        </div>
+    </div>
+
+    <!-- ==========================================================================================
+         HEADER & NAVIGATION: القائمة العلوية
+    ========================================================================================== -->
+    <header class="site-header" id="header">
+        <div class="container header-container">
+            <!-- LOGO AREA -->
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo-link" aria-label="العودة للرئيسية">
+                    <!-- SVG Logo Inline for Performance -->
+                    <svg width="180" height="50" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#cca43b;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#ffd700;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <text x="10" y="50" font-family="'Courier New', monospace" font-weight="bold" font-size="40" fill="url(#goldGradient)">
+                            &lt;AboElfadl/&gt;
+                        </text>
+                        <circle cx="280" cy="40" r="5" fill="#e63946" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- NAVIGATION MENU -->
+            <nav class="main-nav" role="navigation" aria-label="القائمة الرئيسية">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#hero" class="nav-link active">الرئيسية</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">عن القائد</a></li>
+                    <li class="nav-item"><a href="#history-tech" class="nav-link">التاريخ والتقنية</a></li>
+                    <li class="nav-item"><a href="#security-hub" class="nav-link security-link">التوعية الأمنية <span class="badge">هام</span></a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">المشاريع</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link cta-button">تواصل معي</a></li>
+                </ul>
+            </nav>
+
+            <!-- MOBILE MENU TOGGLE -->
+            <button class="mobile-menu-btn" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobile-nav">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ==========================================================================================
+         MAIN CONTENT WRAPPER
+    ========================================================================================== -->
+    <main id="main-content">
+
+        <!-- 
+            SECTION 1: HERO SECTION (الواجهة الرئيسية)
+            يحتوي على: تعريف، كتابة تلقائية، وشعار بصري
+        -->
+        <section id="hero" class="hero-section" aria-label="مقدمة الموقع">
+            <div class="hero-bg-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text-area">
+                    <span class="hero-subtitle">أهلاً بك في عالمي الرقمي</span>
+                    <h1 class="hero-title">
+                        أنا <span class="highlight-name">محمود إبراهيم</span>
+                        <br>
+                        <span class="dynamic-text-wrapper">
+                            <span class="static-text">أنا </span>
+                            <span class="typing-text" id="typing-effect"></span>
+                            <!-- سيتم تفعيل الكتابة بـ JS: (مطور ويب | باحث تاريخي | خبير أمني | قائد) -->
+                        </span>
+                    </h1>
+                    <p class="hero-description">
+                        طالب بقسم التاريخ - جامعة حلوان، ومطور برمجيات شغوف بالأمن السيبراني. 
+                        أجمع بين <strong class="text-gold">حكمة الماضي</strong> و <strong class="text-red">تكنولوجيا المستقبل</strong>. 
+                        مؤسس العلامة التجارية "AboElfadl". هدفي هو بناء ويب آمن، سريع، وذكي.
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary btn-lg">
+                            <span class="icon-wrapper">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                </svg>
+                            </span>
+                            استعرض أعمالي
+                        </a>
+                        <a href="#security-hub" class="btn btn-outline btn-lg">
+                            <span class="icon-wrapper">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                            </span>
+                            دليلك الأمني
+                        </a>
+                    </div>
+                </div>
+
+                <!-- HERO VISUAL (ABSTRACT ART) -->
+                <div class="hero-visual-area">
+                    <div class="hexagon-wrapper">
+                        <!-- SVG Abstract Representation of History + Code -->
+                        <svg class="hero-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background Circuit Board Pattern -->
+                            <pattern id="circuit" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+                                <path d="M10 10 H 20 V 20 H 10 Z" fill="#1a1a1a" />
+                                <circle cx="25" cy="25" r="2" fill="#333" />
+                                <path d="M0 25 H 50" stroke="#222" stroke-width="0.5"/>
+                            </pattern>
+                            <rect width="500" height="500" fill="url(#circuit)" />
+                            
+                            <!-- Central Element: The Shield (Security) & Book (History) -->
+                            <g transform="translate(100, 100)">
+                                <path d="M150 0 L280 60 L280 180 C280 260 150 320 150 320 C150 320 20 260 20 180 L20 60 L150 0 Z" 
+                                      fill="none" stroke="#cca43b" stroke-width="5" />
+                                <text x="150" y="160" text-anchor="middle" fill="#e63946" font-size="80" font-family="monospace">&lt;/&gt;</text>
+                                <text x="150" y="220" text-anchor="middle" fill="#aaa" font-size="20">HISTORY & CODE</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SCROLL DOWN INDICATOR -->
+            <a href="#about" class="scroll-down-btn" aria-label="انزل للأسفل">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+            </a>
+        </section>
+
+        <!-- 
+            SECTION 2: ABOUT ME (الشخصية والتحليل)
+            التركيز: القيادة، التنظيم، الدمج بين الدراسة والشغف
+        -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">من هو <span class="highlight-gold">أبو الفضل؟</span></h2>
+                    <p class="section-subtitle">أكثر من مجرد مبرمج.. قصة طموح وقيادة.</p>
+                    <div class="title-separator"></div>
+                </div>
+
+                <div class="about-grid">
+                    <!-- PERSONAL INFO CARD -->
+                    <div class="about-card info-card">
+                        <div class="card-icon">
+                            <img src="icon/maa.png" alt="Profile Icon" class="card-icon-img">
+
+                        </div>
+                        <h3>الهوية الشخصية</h3>
+                        <ul class="info-list">
+                            <li><strong>الاسم:</strong> محمود إبراهيم محمد أبو الفضل</li>
+                            <li><strong>الدراسة:</strong> كلية الآداب، قسم التاريخ (جامعة حلوان)</li>
+                            <li><strong>السنة الدراسية:</strong> الفرقة الثالثة (قريباً)</li>
+                            <li><strong>الإقامة:</strong> بين مصر وطموح العالمية (الولايات المتحدة كحلم ومثال)</li>
+                            <li><strong>الشخصية:</strong> INTJ (المخطط الاستراتيجي) - قيادي بالفطرة.</li>
+                        </ul>
+                    </div>
+
+                    <!-- LEADERSHIP CARD -->
+                    <div class="about-card leadership-card">
+                        <div class="card-icon">
+                            <img src="icon/maaa.png" alt="Profile Icon" class="card-icon-img">
+                        </div>
+                        <h3>الفلسفة القيادية</h3>
+                        <p>
+                            أؤمن بأن القيادة ليست منصباً، بل هي القدرة على اتخاذ القرارات الصعبة، وتنظيم الفوضى.
+                            في مشاريعي (مثل AboElfadl Store)، أطبق مبادئ الدقة المتناهية. لا أقبل بـ "الجيد"، 
+                            بل أبحث دائماً عن "الممتاز" و "الاحترافي". أحب أن أكون المايسترو الذي يضبط إيقاع العمل.
+                        </p>
+                    </div>
+
+                    <!-- SKILLS PROGRESS -->
+                    <div class="about-card skills-card">
+                        <h3>الترسانة التقنية</h3>
+                        
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>HTML5 / Semantic Web</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress-bg"><div class="progress-fill gold" style="width: 95%"></div></div>
+                        </div>
+
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>CSS3 / Tailwind / Animations</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bg"><div class="progress-fill red" style="width: 90%"></div></div>
+                        </div>
+
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>JavaScript (ES6+)</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bg"><div class="progress-fill gold" style="width: 85%"></div></div>
+                        </div>
+
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>Cybersecurity Awareness</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-bg"><div class="progress-fill red" style="width: 80%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            SECTION 3: HISTORY & TECH (فلسفة الدمج)
+            شرح كيف يفيد التاريخ المبرمج
+        -->
+        <section id="history-tech" class="section duel-section">
+            <div class="container">
+                <div class="duel-layout">
+                    <div class="duel-text">
+                        <h2 class="section-title text-left">التاريخ: كود البشرية</h2>
+                        <h3 class="duel-subtitle">كيف تخدمني دراسة التاريخ في البرمجة؟</h3>
+                        <div class="duel-content">
+                            <p>
+                                قد يستغرب البعض: "ما علاقة طالب تاريخ بالبرمجة؟" والإجابة تكمن في كلمة واحدة: 
+                                <strong class="highlight-text">التحليل</strong>.
+                            </p>
+                            <p>
+                                دراسة التاريخ علمتني البحث عن أصول الأشياء، ربط الأحداث ببعضها (Causality)، 
+                                والتحقق من صحة المصادر. هذا هو بالضبط ما يفعله المبرمج وخبير الأمن السيبراني:
+                            </p>
+                            <ul class="styled-list">
+                                <li><strong>التوثيق:</strong> المؤرخ يوثق الأحداث، والمبرمج يوثق الكود (Documentation).</li>
+                                <li><strong>اكتشاف الأنماط:</strong> التاريخ يعيد نفسه، وكذلك الثغرات الأمنية تتكرر بأنماط متشابهة.</li>
+                                <li><strong>الصبر والدقة:</strong> البحث في المخطوطات يشبه تماماً البحث عن Bug في آلاف الأسطر البرمجية.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="duel-image">
+                        <!-- SVG Illustration: Scroll vs Tablet -->
+                        <svg width="100%" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="50" y="50" width="300" height="300" rx="20" fill="#1e1e1e" stroke="#444" stroke-width="2"/>
+                            <!-- Binary Code Background -->
+                            <text x="70" y="100" fill="#333" font-family="monospace" font-size="12">01010101 1010101 00101</text>
+                            <text x="70" y="120" fill="#333" font-family="monospace" font-size="12">11010 010101 1110 0101</text>
+                            <!-- Old Scroll Overlay -->
+                            <path d="M100 350 Q 200 380 300 350 L 300 150 Q 200 180 100 150 Z" fill="#cca43b" opacity="0.8"/>
+                            <text x="130" y="250" fill="#000" font-family="serif" font-size="24" font-weight="bold">History</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            SECTION 4: SECURITY HUB (مركز التوعية الأمنية) - الجزء الأضخم والأهم
+            يحتوي على مقالات تفصيلية ونصائح عملية
+        -->
+        <section id="security-hub" class="section security-section">
+            <div class="security-overlay"></div>
+            <div class="container relative-z">
+                <div class="section-header center">
+                    <span class="security-badge">منطقة الحماية</span>
+                    <h2 class="section-title">درع <span class="text-red">الوعي الأمني</span></h2>
+                    <p class="section-subtitle">لا تكن الضحية القادمة.. تعلم كيف يفكر المهاجم لتحمي نفسك.</p>
+                </div>
+
+                <!-- SECURITY ARTICLES GRID -->
+                <div class="articles-grid">
+                    
+                    <!-- Article 1: Phishing -->
+                    <article class="security-card">
+                        <div class="card-header-icon phishing">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                                <path d="M10 14l11-11M21 3l-6.5 18a0.55 0.55 0 0 1-1 0L10 14l-7-3.5a0.55 0.55 0 0 1 0-1L21 3"/>
+                            </svg>
+                        </div>
+                        <h3>التصيد الإلكتروني (Phishing)</h3>
+                        <p class="summary">كيف تكتشف الرسائل المزيفة التي تسرق حساباتك؟</p>
+                        <div class="detailed-content">
+                            <p>التصيد هو أشهر وسيلة لاختراق حسابات الفيسبوك والبنوك. المهاجم لا يخترق النظام، بل يخترق عقلك!</p>
+                            <h4>علامات الخطر:</h4>
+                            <ul>
+                                <li>الروابط الغريبة (مثلاً: faceb00k.com بدلاً من facebook.com).</li>
+                                <li>رسائل الاستعجال: "تم إيقاف حسابك، اضغط هنا فوراً".</li>
+                                <li>الأخطاء الإملائية في الإيميلات الرسمية.</li>
+                            </ul>
+                            <div class="tip-box warning">
+                                <strong>نصيحة محمود:</strong> لا تضغط أبداً على رابط يطلب منك إعادة تسجيل الدخول. اذهب للموقع الرسمي بنفسك.
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 2: Passwords -->
+                    <article class="security-card">
+                        <div class="card-header-icon password">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                                <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
+                            </svg>
+                        </div>
+                        <h3>قوة كلمات المرور</h3>
+                        <p class="summary">القواعد الذهبية لإنشاء كلمة سر مستحيلة التخمين.</p>
+                        <div class="detailed-content">
+                            <p>كلمة السر الضعيفة مثل "123456" أو رقم هاتفك هي دعوة مفتوحة للهاكرز.</p>
+                            <h4>القاعدة الصارمة (My Standard):</h4>
+                            <ul>
+                                <li>لا تقل عن <strong>8 خانات</strong>.</li>
+                                <li>يجب أن تكون <strong>باللغة الإنجليزية فقط</strong> (لتجنب مشاكل التشفير في بعض الأنظمة).</li>
+                                <li>تنوع بين: (Upper, Lower, Numbers, Symbols).</li>
+                                <li>مثال قوي: <code>M@hmoud_2025!Sec</code></li>
+                            </ul>
+                            <div class="tip-box success">
+                                <strong>نصيحة محمود:</strong> استخدم المصادقة الثنائية (2FA) دائماً.
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 3: Social Engineering -->
+                    <article class="security-card">
+                        <div class="card-header-icon social">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>الهندسة الاجتماعية</h3>
+                        <p class="summary">فن اختراق البشر.. أخطر أنواع الهجوم.</p>
+                        <div class="detailed-content">
+                            <p>الهندسة الاجتماعية تعتمد على استغلال الثقة أو الخوف أو الطمع لدى الضحية.</p>
+                            <h4>أمثلة واقعية:</h4>
+                            <ul>
+                                <li>شخص يتصل بك ويدعي أنه من "خدمة عملاء البنك" ويطلب الـ OTP.</li>
+                                <li>رسالة "مبروك كسبت سيارة، ادفع فقط مصاريف الشحن".</li>
+                            </ul>
+                            <div class="tip-box danger">
+                                <strong>تذكر:</strong> البنك الحقيقي لا يطلب منك كلمة السر أو الـ OTP عبر الهاتف أبداً.
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- SIMULATION TOOLS CTA -->
+                <div class="security-tools-cta">
+                    <h3>هل تريد تجربة حقيقية؟</h3>
+                    <p>قمت بتطوير أدوات محاكاة تعليمية (Sandboxed) لتجربة سيناريوهات الاختراق بأمان.</p>
+                    <div class="cta-group">
+                        <button class="btn btn-secondary" onclick="alert('سيتم إطلاق أداة فحص الروابط قريباً')">أداة فحص الروابط</button>
+                        <button class="btn btn-outline" onclick="alert('سيتم إطلاق أداة قوة الباسورد قريباً')">اختبار الباسورد</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            SECTION 5: PROJECTS & PORTFOLIO (معرض الأعمال)
+            استعراض المشاريع البرمجية التي طلبتها
+        -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">أعمال <span class="highlight-gold">تتحدث عن نفسها</span></h2>
+                    <p class="section-subtitle">نماذج حية لتطبيقات قمت ببنائها (HTML, CSS, JS).</p>
+                </div>
+
+                <div class="projects-grid">
+                    
+                    <!-- PROJECT 1: TEXT COMPARISON -->
+                    <div class="project-card" data-category="web-tool">
+                        <div class="project-image">
+                            <!-- Placeholder SVG for Project Thumbnail -->
+                            <img src="icon/aboelfadl_tools.png" alt="أداة مقارنة النصوص" class="project-thumb-img">
+
+                        </div>
+                        <div class="project-info">
+                            <h3>ABO-ELFADL TOOLS </h3>
+                            <p class="tech-stack">
+                                <span class="tag">عالمك التقني في منصة واحدة</span>
+                                <span class="tag">تصميم عصري لسهولة وسرعة فائقة</span>
+                                <span class="tag"> ذكاء اصطناعي وحلول برمجية متطورة</span>
+                            </p>
+                            <p class="description">
+                              هي منصة رقمية شاملة (Web Application) تعمل كـ "لوحة تحكم مركزية" (Dashboard) تجمع مئات الأدوات التقنية والخدمية في مكان واحد. تهدف المنظومة لتسهيل وصول المطورين والمستخدمين العاديين إلى الأدوات اليومية، خدمات الذكاء الاصطناعي، أدوات البرمجة، والخدمات الحكومية المصرية، بتصميم عصري (Dark Mode) وتجربة مستخدم سلسة.  
+                          </p>
+                            <div class="project-links">
+                                <a href="https://aboelfadl-tools.netlify.app/" class="btn-sm">معاينة</a>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 2: SECURE LOGIN -->
+                    <div class="project-card" data-category="security">
+                        <img src="icon/web_aboelfadl.png" alt="أداة مقارنة النصوص" class="project-thumb-img">
+
+                        </div>
+                        <div class="project-info">
+                            <h3>Web ABO-ELFADL</h3>
+                            <p class="tech-stack">
+                                <span class="tag">الترسانة التقنية الشاملة</span>
+                                <span class="tag">مُختبر الأمن الذكية</span>
+                                <span class="tag">الترسانة التقنية الشاملة</span>
+                            </p>
+                            <p class="description">
+                                هي عبارة عن بوابة إلكترونية مركزية (Dashboard) مصممة بأسلوب عصري، تهدف إلى تجميع أدوات تقنية، خدمات أمن سيبراني (تعليمية)، محاكيات أنظمة، وروابط ذكاء اصطناعي في مكان واحد. تعمل المنظومة كدليل شامل للمستخدم أو المطور للوصول السريع إلى مصادر مختلفة.                            <div class="project-links">
+                                <a href="https://web-aboelfadl.netlify.app/" class="btn-sm">معاينة</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 3: LANDING PAGES -->
+                    <div class="project-card" data-category="marketing">
+                        <div class="project-image">
+                             <img src="icon/free_tools.png" alt="أداة مقارنة النصوص" class="project-thumb-img">
+
+                        </div>
+                        <div class="project-info">
+                            <h3>ادوات الاختراق</h3>
+                            <p class="tech-stack">
+                                <span class="tag">Facebook hacking</span>
+                                <span class="tag">Telegram Hacking</span>
+                                <span class="tag">Camera Hacking</span>
+                            </p>
+                            <p class="description">
+                                مجموعه كبيره من الادوات وخضائص عديد مهمتها الأساسية تعويه من خطرالتخول علي روبط مجهولة المصدر 
+                            </p>
+                            <div class="project-links">
+                                <a href="https://free-tools-hacker.netlify.app/" class="btn-sm">معاينة</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            SECTION 6: TESTIMONIALS (آراء العملاء / الافتراضية)
+            لإبراز الجانب الاجتماعي والثقة (Social Proof)
+        -->
+        <section class="section testimonials-section">
+            <div class="container">
+                <h2 class="section-title center">ماذا قالوا عن <span class="highlight-gold">العمل معي؟</span></h2>
+                
+                <div class="testimonials-slider">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-box">
+                        <div class="quote-icon">❝</div>
+                        <p class="feedback">
+                            محمود يمتلك عقلية منظمة جداً. التعامل معه في تصميم الموقع كان سلساً، 
+                            وفهم متطلبات الأمان التي نحتاجها من أول مرة. قائد حقيقي.
+                        </p>
+                        <div class="client-info">
+                         <img src="icon/m.png" alt="Pro Icon" class="card-icon-img client-img-fix">
+                            <div class="client-details">
+                                <h4>أحمد محمد</h4>
+                                <span>صاحب متجر إلكتروني</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-box">
+                        <div class="quote-icon">❝</div>
+                        <p class="feedback">
+                            نصائحه في الأمن السيبراني أنقذت حسابي من السرقة. طريقته في الشرح بسيطة 
+                            وتجعلك تفهم أعقد الأمور التقنية بسهولة.
+                        </p>
+                        <div class="client-info">
+                            <img src="icon/i.png" alt="Pro Icon" class="card-icon-img client-img-fix">
+
+                            <div class="client-details">
+                                <h4>سارة علي</h4>
+                                <span>زميلة دراسة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            SECTION 7: CONTACT ME (نموذج التواصل)
+            مصمم بشكل احترافي مع بيانات اتصال وهمية
+        -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h2 class="contact-title">لنبدأ العمل معاً</h2>
+                        <p class="contact-desc">
+                            سواء كان لديك مشروع برمجي، استشارة أمنية، أو نقاش تاريخي.. 
+                            أنا هنا للاستماع والتنفيذ.
+                        </p>
+                        
+                        <div class="info-item">
+                            <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div> <!-- FontAwesome Placeholder -->
+                            <div>
+                                <h4>الموقع</h4>
+                                <p>مصر (حالياً) - طموح نحو الولايات المتحدة</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>البريد الإلكتروني</h4>
+                                <p>contact@aboelfadl-media.com</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon-box"><i class="fas fa-network-wired"></i></div>
+                            <div>
+                                <h4>الحالة</h4>
+                                <p><span class="status-indicator online"></span> متاح للمشاريع الجديدة</p>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/share/1AZMnjncdm/" class="social-btn facebook" aria-label="فيسبوك"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                            <a href="https://github.com/iphone011012013-maker" class="social-btn github" aria-label="جيتهب"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-box">
+                        <form id="main-contact-form" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">الاسم الكامل</label>
+                                <input type="text" id="name" name="name" placeholder="محمود إبراهيم" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">البريد الإلكتروني</label>
+                                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">نوع الخدمة</label>
+                                <select id="service" name="service">
+                                    <option value="web">تطوير موقع ويب</option>
+                                    <option value="security">استشارة أمنية</option>
+                                    <option value="other">أخرى</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">رسالتك</label>
+                                <textarea id="message" name="message" rows="5" placeholder="تفاصيل مشروعك..." required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                إرسال الرسالة
+                                <svg class="send-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================================================================
+         FOOTER: التذييل السفلي
+    ========================================================================================== -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            
+            <!-- Column 1: Brand -->
+            <div class="footer-col brand-col">
+                <h3 class="footer-logo">&lt;AboElfadl/&gt;</h3>
+                <p>
+                    نحن نبني الجسور بين الماضي (التاريخ) والمستقبل (التقنية).
+                    نسعى لنشر الوعي الأمني وتمكين الأفراد رقمياً.
+                </p>
+                <div class="copyright">
+                    &copy; 2025 جميع الحقوق محفوظة لمحمود إبراهيم أبو الفضل.
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-col links-col">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#hero">الرئيسية</a></li>
+                    <li><a href="#about">من أنا</a></li>
+                    <li><a href="#projects">المشاريع</a></li>
+                    <li><a href="#security-hub">التوعية الأمنية</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Services -->
+            <div class="footer-col services-col">
+                <h4>خدماتي</h4>
+                <ul>
+                    <li>تطوير واجهات (Front-End)</li>
+                    <li>صفحات هبوط (Landing Pages)</li>
+                    <li>استشارات أمان المعلومات</li>
+                    <li>تصميم هوية بصرية</li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Newsletter -->
+            <div class="footer-col newsletter-col">
+                <h4>النشرة البريدية</h4>
+                <p>اشترك لتصلك أحدث نصائح الحماية وتحديثات المشاريع.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="بريدك الإلكتروني">
+                    <button type="submit">اشتراك</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container">
+                <p>تم التطوير بكل فخر بواسطة <span class="text-gold">Mahmoud Ibrahim</span> | Cairo, Egypt</p>
+                <div class="tech-badges">
+                    <span class="badge">HTML5</span>
+                    <span class="badge">CSS3</span>
+                    <span class="badge">JS</span>
+                    <span class="badge">Security First</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================================
+         SCRIPTS LINKING: ربط ملفات الجافاسكريبت
+         (سيتم طلب هذا الملف لاحقاً لإضافة التفاعل)
+    ========================================================================================== -->
+    <script src="script.js"></script>
+
+    <!-- 
+         ملاحظة للمطور (محمود):
+         هذا الملف يحتوي على الهيكل العظمي والبيانات فقط.
+         للحصول على الشكل النهائي الجذاب (الألوان الذهبية، الخلفيات الداكنة، والتحركات)،
+         يجب إنشاء ملف style.css بالتعليمات التي ستطلبها لاحقاً.
+    -->
+
+</body>
+</html>
+

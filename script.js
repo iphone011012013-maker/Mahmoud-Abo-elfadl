@@ -811,6 +811,116 @@ document.addEventListener('DOMContentLoaded', () => {
     Logger.log("Mahmoud's Portfolio Loaded & Secured.", "success");
 });
 
+/* ==========================================================================
+   10. VENTURES MODAL SYSTEM (NEW FEATURE)
+   نظام إدارة نوافذ المشاريع التجارية
+   ========================================================================== */
+
+const VenturesSystem = {
+    // قاعدة بيانات المشاريع (سهلة التعديل)
+    data: {
+        media: {
+            title: "AboElfadl Media",
+            desc: "وكالة تسويق رقمي متكاملة وتصميم جرافيك.",
+            img: "icon/media.png",
+            links: [
+                { type: "facebook", url: "https://www.facebook.com/share/1DMbfJqkuC/", icon: "fab fa-facebook-f", label: "Facebook" },
+                { type: "instagram", url: "https://www.instagram.com/aboelfadlmedi", icon: "fab fa-instagram", label: "Instagram" },
+                { type: "website", url: "https://aboelfadl-media.my.canva.site/", icon: "fas fa-globe", label: "Visit Site" },
+                { type: "whatsapp", url: "https://wa.me/201093650351", icon: "fab fa-whatsapp", label: "WhatsApp" }
+            ]
+        },
+        store: {
+            title: "AboElfadl Store",
+            desc: "متجر التكنولوجيا والإكسسوارات الحديثة.",
+            img: "icon/store.png",
+            links: [
+                { type: "facebook", url: "https://web.facebook.com/AboElfadl.store.Official", icon: "fab fa-facebook-f", label: "Facebook" },
+                { type: "instagram", url: "https://www.instagram.com/aboelfadl.store.official", icon: "fab fa-instagram", label: "Instagram" },
+                { type: "website", url: "https://cezma.com/store/AboElfadl-Store", icon: "fas fa-shopping-cart", label: "Shop Now" },
+                { type: "whatsapp", url: "https://wa.me/201112041298", icon: "fab fa-whatsapp", label: "WhatsApp" }
+            ]
+        },
+        clothing: {
+            title: "ملابس أبو الفضل",
+            desc: "أزياء رجالية بتصاميم عصرية وخامات مميزة.",
+            img: "icon/clothing.png",
+            links: [
+                { type: "facebook", url: "https://web.facebook.com/aboelfadl.clothing/", icon: "fab fa-facebook-f", label: "Facebook" },
+                { type: "instagram", url: "https://www.instagram.com/aboelfadl.clothing/", icon: "fab fa-instagram", label: "Instagram" },
+                { type: "website", url: "https://cezma.com/store/aboelfadl.clothing", icon: "fas fa-tshirt", label: "Store" },
+                { type: "whatsapp", url: "https://wa.me/201112041298", icon: "fab fa-whatsapp", label: "WhatsApp" }
+            ]
+        },
+        egypt: {
+            title: "Accessories Egypt",
+            desc: "كل ما يخص إكسسوارات الموبايل والتقنية.",
+            img: "icon/Egypt.png",
+            links: [
+                { type: "facebook", url: "https://web.facebook.com/Accessories.Egypt.official/", icon: "fab fa-facebook-f", label: "Facebook" },
+                { type: "instagram", url: "https://www.instagram.com/Accessories.Egypt.official/", icon: "fab fa-instagram", label: "Instagram" },
+                { type: "website", url: "https://cezma.com/store/Accessories.Egypt.official", icon: "fas fa-shopping-bag", label: "Store" },
+                { type: "whatsapp", url: "https://wa.me/201061809351", icon: "fab fa-whatsapp", label: "WhatsApp" }
+            ]
+        },
+        brando: {
+            title: "Brando",
+            desc: "براند عصري بلمسة شبابية.",
+            img: "icon/Brando.png",
+            links: [
+                { type: "facebook", url: "https://www.facebook.com/share/17ByAh9Emc/", icon: "fab fa-facebook-f", label: "Facebook" },
+                { type: "instagram", url: "https://www.instagram.com/br.ando6296", icon: "fab fa-instagram", label: "Instagram" },
+                { type: "tiktok", url: "https://tiktok.com/@br.ando6296", icon: "fab fa-tiktok", label: "TikTok" },
+                { type: "website", url: "https://bra-ndo.netlify.app/", icon: "fas fa-globe", label: "Website" },
+                { type: "whatsapp", url: "https://wa.me/201205420752", icon: "fab fa-whatsapp", label: "WhatsApp" }
+            ]
+        }
+    },
+
+    // دالة فتح النافذة
+    openModal: (key) => {
+        const modal = document.getElementById('venture-modal');
+        const project = VenturesSystem.data[key];
+        
+        if (!project || !modal) return;
+
+        // تعبئة البيانات
+        document.getElementById('vm-title').innerText = project.title;
+        document.getElementById('vm-desc').innerText = project.desc;
+        document.getElementById('vm-img').src = project.img;
+
+        // توليد الروابط
+        const linksContainer = document.getElementById('vm-links');
+        linksContainer.innerHTML = ''; // مسح القديم
+
+        project.links.forEach(link => {
+            const a = document.createElement('a');
+            a.href = link.url;
+            a.className = `modal-link-btn ${link.type}`;
+            a.target = "_blank";
+            a.innerHTML = `<i class="${link.icon}"></i> ${link.label}`;
+            linksContainer.appendChild(a);
+        });
+
+        // إظهار النافذة
+        modal.classList.add('active');
+    },
+
+    // دالة غلق النافذة
+    closeModal: () => {
+        const modal = document.getElementById('venture-modal');
+        if (modal) modal.classList.remove('active');
+    }
+};
+
+// إغلاق النافذة عند الضغط على زر ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') VenturesSystem.closeModal();
+});
+
+
+
+
 /* END OF SCRIPT
    Designed and Developed by Mahmoud Ibrahim
    (AboElfadl Media)

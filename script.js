@@ -918,8 +918,12 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') VenturesSystem.closeModal();
 });
 
+const chatToggle = document.getElementById("chatToggle");
+const chatFab = document.getElementById("chatFab");
 
-
+chatToggle.addEventListener("click", () => {
+  chatFab.classList.toggle("active");
+});
 
 /* END OF SCRIPT
    Designed and Developed by Mahmoud Ibrahim
